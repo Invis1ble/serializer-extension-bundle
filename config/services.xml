@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="invis1ble_serializer_extension.uri_factory"
+                 class="GuzzleHttp\Psr7\HttpFactory"
+                 public="true">
+        </service>
+
+        <service id="Psr\Http\Message\UriFactoryInterface"
+                 alias="invis1ble_serializer_extension.uri_factory">
+        </service>
+
+        <service id="invis1ble_serializer_extension.normalizer.uri"
+                 class="Invis1ble\SymfonySerializerExtension\Normalizer\UriNormalizer"
+                 autowire="true">
+            <argument type="service" id="invis1ble_serializer_extension.uri_factory" />
+            <tag name="serializer.normalizer" priority="10" />
+        </service>
+
+    </services>
+
+</container>

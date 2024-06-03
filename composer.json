@@ -1,0 +1,49 @@
+{
+    "name": "invis1ble/serializer-extension-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony Bundle for symfony/serializer extension.",
+    "authors": [
+        {
+            "name": "Invis1ble",
+            "email": "Invis1ble@users.noreply.github.com"
+        }
+    ],
+    "keywords": [
+        "serializer",
+        "deserializer",
+        "normalizer",
+        "denormalizer",
+        "uri",
+        "url",
+        "uriinterface",
+        "psr",
+        "extension",
+        "symfony-bundle"
+    ],
+    "require": {
+        "php": ">=8.1",
+        "symfony/http-kernel": "^6.4|^7.0",
+        "symfony/dependency-injection": "^6.4|^7.0",
+        "symfony/config": "^6.4|^7.0",
+        "invis1ble/symfony-serializer-extension": "dev-main",
+        "guzzlehttp/guzzle": "8.0.x-dev"
+    },
+    "require-dev": {
+        "escapestudios/symfony2-coding-standard": "^3.0@dev",
+        "friendsofphp/php-cs-fixer": "dev-master",
+        "matthiasnoback/symfony-dependency-injection-test": "^5.0",
+        "rector/rector": "dev-main",
+        "symfony/framework-bundle": "<=7.0.7",
+        "symfony/test-pack": "^1.0",
+        "symfony/dotenv": "7.2.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Invis1ble\\SerializerExtensionBundle\\": "src/",
+            "Invis1ble\\SerializerExtensionBundle\\Tests\\": "tests/"
+        },
+        "exclude-from-classmap": ["/tests/"]
+    },
+    "minimum-stability": "dev",
+    "license": "MIT"
+}
