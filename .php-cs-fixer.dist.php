@@ -6,7 +6,13 @@ use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
 $finder = Finder::create()
-    ->exclude('vendor')
+    ->exclude([
+        'var',
+        'vendor',
+    ])
+    ->notPath([
+        'tests/bootstrap.php',
+    ])
     ->in(__DIR__)
 ;
 
