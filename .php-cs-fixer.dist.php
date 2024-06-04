@@ -10,9 +10,6 @@ $finder = Finder::create()
         'var',
         'vendor',
     ])
-    ->notPath([
-        'tests/bootstrap.php',
-    ])
     ->in(__DIR__)
 ;
 

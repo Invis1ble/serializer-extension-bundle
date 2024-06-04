@@ -25,7 +25,6 @@
     <rule ref="Generic.PHP.RequireStrictTypes" />
 
     <exclude-pattern>/config/bundles.php</exclude-pattern>
-    <exclude-pattern>/tests/bootstrap.php</exclude-pattern>
     <exclude-pattern>/var/*</exclude-pattern>
     <exclude-pattern>/vendor/*</exclude-pattern>
 
