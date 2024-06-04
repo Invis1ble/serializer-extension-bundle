@@ -5,6 +5,7 @@
         https://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
+
         <service id="invis1ble_serializer_extension.uri_factory"
                  class="GuzzleHttp\Psr7\HttpFactory"
                  public="true">
@@ -22,5 +23,19 @@
         </service>
 
     </services>
+
+    <when env="test">
+
+        <services>
+
+            <service id="serializer.normalizer.property"
+                     class="Symfony\Component\Serializer\Normalizer\PropertyNormalizer"
+                     autowire="true"
+                     autoconfigure="true">
+            </service>
+
+        </services>
+
+    </when>
 
 </container>
