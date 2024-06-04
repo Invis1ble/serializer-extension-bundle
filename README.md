@@ -1,5 +1,5 @@
 SerializerExtensionBundle
-==========================
+=========================
 
 ![CI Status](https://github.com/Invis1ble/serializer-extension-bundle/actions/workflows/ci.yml/badge.svg?event=push)
 [![Code Coverage](https://codecov.io/gh/Invis1ble/serializer-extension-bundle/graph/badge.svg?token=K7S3BXER5K)](https://codecov.io/gh/Invis1ble/serializer-extension-bundle)
