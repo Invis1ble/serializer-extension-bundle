@@ -15,7 +15,7 @@ class UriNormalizerTest extends KernelTestCase
      */
     public function itTakesPrecedenceOverPropertyNormalizer(): void
     {
-        self::bootKernel();
+        self::bootKernel(['environment' => 'serializer_test']);
 
         $container = static::getContainer();
 

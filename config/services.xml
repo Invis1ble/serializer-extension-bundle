@@ -24,18 +24,4 @@
 
     </services>
 
-    <when env="test">
-
-        <services>
-
-            <service id="serializer.normalizer.property"
-                     class="Symfony\Component\Serializer\Normalizer\PropertyNormalizer"
-                     autowire="true"
-                     autoconfigure="true">
-            </service>
-
-        </services>
-
-    </when>
-
 </container>
