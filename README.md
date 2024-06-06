@@ -2,7 +2,7 @@ SerializerExtensionBundle
 ==========================
 
 ![CI Status](https://github.com/Invis1ble/serializer-extension-bundle/actions/workflows/ci.yml/badge.svg?event=push)
-[![Code Coverage](https://codecov.io/gh/Invis1ble/serializer-extension-bundle/graph/badge.svg?token=K7S3BXER5K)](https://codecov.io/gh/Invis1ble/serializer-extension-bundle)
+[![Code Coverage](https://codecov.io/gh/Invis1ble/serializer-extension-bundle/graph/badge.svg?token=SEBR5ZUYWL)](https://codecov.io/gh/Invis1ble/serializer-extension-bundle)
 [![Packagist](https://img.shields.io/packagist/v/Invis1ble/serializer-extension-bundle.svg)](https://packagist.org/packages/Invis1ble/serializer-extension-bundle)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
