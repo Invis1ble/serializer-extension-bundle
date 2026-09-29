@@ -15,10 +15,10 @@ class Invis1bleSerializerExtensionBundle extends AbstractBundle
         ContainerConfigurator $container,
         ContainerBuilder $builder,
     ): void {
-        $container->import('../config/services.xml');
+        $container->import('../config/services.php');
 
         if ('serializer_test' === $container->env()) {
-            $container->import('../config/services_serializer_test.xml');
+            $container->import('../config/services_serializer_test.php');
         }
     }
 }

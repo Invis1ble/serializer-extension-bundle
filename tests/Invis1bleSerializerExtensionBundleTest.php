@@ -8,6 +8,7 @@ use GuzzleHttp\Psr7\HttpFactory;
 use Invis1ble\SerializerExtensionBundle\Invis1bleSerializerExtensionBundle;
 use Invis1ble\SymfonySerializerExtension\Normalizer\UriNormalizer;
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Psr\Http\Message\UriFactoryInterface;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
@@ -30,9 +31,7 @@ class Invis1bleSerializerExtensionBundleTest extends AbstractExtensionTestCase
         );
     }
 
-    /**
-     * @dataProvider provideNormalizer
-     */
+    #[DataProvider('provideNormalizer')]
     public function testContainerHasNormalizer(string $serviceId, string $serviceFqn, int $priority): void
     {
         $this->load();
@@ -50,6 +49,11 @@ class Invis1bleSerializerExtensionBundleTest extends AbstractExtensionTestCase
             serviceId: $serviceId,
             tag: 'serializer.normalizer',
             attributes: ['priority' => $priority],
+        );
+
+        $this->assertSame(
+            [$serviceId => [['priority' => $priority]]],
+            $this->container->findTaggedServiceIds('serializer.normalizer'),
         );
     }
 
