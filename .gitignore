@@ -2,6 +2,10 @@
 /vendor/
 composer.lock
 
+# Local agent instructions and private Codex configuration
+/AGENTS.md
+/.codex/
+
 ###> friendsofphp/php-cs-fixer ###
 /.php-cs-fixer.cache
 /.php-cs-fixer.php
